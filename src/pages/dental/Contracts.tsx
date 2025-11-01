@@ -1023,19 +1023,19 @@ export default function DentalContracts() {
 
             {/* Status and Delivery */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              <div>
-                <label className="block text-sm font-medium mb-2 text-right">حالة العقد</label>
-                <div className="flex items-center gap-2 text-right">
-                  <input
-                    type="checkbox"
-                    checked={formData.status === 'جديد'}
-                    disabled
-                    className="ml-2"
-                  />
-                  <span>جديد</span>
-                </div>
-                <p className="text-xs text-red-500 mt-1 text-right">يمكنك لاحقاً تعديل حالة العقد</p>
-              </div>
+            <div>
+  <label className="block text-sm font-medium mb-2 text-right">حالة العقد *</label>
+  <select
+    value={formData.status}
+    onChange={(e) => setFormData(prev => ({ ...prev, status: e.target.value }))}
+    className="w-full p-3 border border-input rounded-md text-right"
+    required
+  >
+    <option value="جديد">جديد</option>
+    <option value="تم التسليم">تم التسليم</option>
+    <option value="مرفوض">مرفوض</option>
+  </select>
+</div>
               <div>
                 <label className="block text-sm font-medium mb-2 text-right">تاريخ التسليم المخطط</label>
                 <input
