@@ -1034,6 +1034,8 @@ export default function DentalContracts() {
     <option value="جديد">جديد</option>
     <option value="تم التسليم">تم التسليم</option>
     <option value="مرفوض">مرفوض</option>
+    <option value="موافق عليه">موافق عليه</option>
+    <option value="تم التعاقد">تم التعاقد</option>
   </select>
 </div>
               <div>
